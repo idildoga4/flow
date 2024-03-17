@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "8236890209",
+    "project_id": "flow-a9fb4",
+    "storage_bucket": "flow-a9fb4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8236890209:android:57f1b4bd94faf33ddcd220",
+        "android_client_info": {
+          "package_name": "com.example.flow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFlLO0unZJExWKXTU0pmZQj0I6ugmO_Y0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
