@@ -25,7 +25,8 @@ class _HomePageState extends State<HomePage> {
       FirebaseFirestore.instance.collection("User Posts").add({
         'UserEmail': currentUser.email,
         'Message': textController.text,
-        'TimeStamp': Timestamp.now()
+        'TimeStamp': Timestamp.now(),
+        'Likes': [],
       });
     }
 
@@ -67,7 +68,9 @@ class _HomePageState extends State<HomePage> {
                     
                     return FlowPost(message: post['message'], 
                     user: post['UserEmail'], 
-                    time: post['']);
+                    postId:post.id,
+                    time: post[''],
+                    likes:List<String>.from(post['Likes']?? []));
                   },
                   );
                 } else if (snapshot.hasError) {

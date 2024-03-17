@@ -78,7 +78,7 @@ void signUp() async
                  const SizedBox(height:25),
 
                  MyTextField(
-                controller: emailTextController,
+                controller: passwordTextController,
                  hintText:'Password' , 
                  obscureText: true),
                  const SizedBox(height:10),
