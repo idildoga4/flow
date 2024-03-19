@@ -1,7 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flow/components/drawer.dart';
 import 'package:flow/components/flow_post.dart';
 import 'package:flow/components/text_field.dart';
+import 'package:flow/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -34,6 +36,11 @@ class _HomePageState extends State<HomePage> {
       textController.clear();
     });
   }
+  void goToProfilePage()
+  {
+    Navigator.pop(context);
+    Navigator.push(context,MaterialPageRoute(builder: (context) => ProfilePage()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +52,10 @@ class _HomePageState extends State<HomePage> {
       actions:[
        IconButton(onPressed: signOut,icon: Icon(Icons.logout)) 
       ]),
+      drawer: MyDrawer(
+        onProfileTap: goToProfilePage,
+        onSignOut: signOut,
+      ),
       body: Center(
         child: Column(
           children:[
